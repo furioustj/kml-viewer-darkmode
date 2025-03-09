@@ -114,9 +114,23 @@ function App() {
         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
         attribution='&copy; OpenStreetMap contributors &copy; CARTO'
       />
-      <GeoJSON data={geoJsonData} />
+  
+      <GeoJSON
+        data={geoJsonData}
+        pointToLayer={(feature, latlng) => {
+          return L.marker(latlng, {
+            icon: L.icon({
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // Replace with your icon URL
+              iconSize: [32, 32],   // Adjust the size
+              iconAnchor: [16, 32], // Anchor point of the icon
+              popupAnchor: [0, -32] // Where popups will open relative to the icon
+            })
+          }).bindPopup(feature.properties.name || 'No name'); // Popup with name or fallback
+        }}
+      />
     </MapContainer>
   );
+  
 
   return (
     <Container fluid className="py-4">
