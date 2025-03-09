@@ -1,0 +1,50 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+}
+
+label {
+  color: #dddddd;
+}
+
+.form-control {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.table {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.card {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  transition: all 0.2s;
+}
